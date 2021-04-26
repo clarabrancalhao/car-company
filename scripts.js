@@ -71,10 +71,10 @@
         }
       });
       table.appendChild(node);
-      handleClickButton();
+      clearValues();
     }
 
-    function handleClickButton() {
+    function clearValues() {
       infos.forEach((element) => {
         element.value = null;
       });
