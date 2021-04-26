@@ -3,6 +3,7 @@
 
   function app() {
     const form = new DOM('form');
+    let table = [...new DOM('table').element][0];
     const header = new DOM('header').element[0];
     const imgValue = [...new DOM('#img').element][0];
     const brandValue = [...new DOM('#brand').element][0];
@@ -17,7 +18,7 @@
       colorValue,
       licensePlateValue,
     ];
-    let table = [...new DOM('table').element][0];
+    let tableId = 0;
 
     form.on('submit', isFormComplete);
 
@@ -57,6 +58,13 @@
 
     function handleSubmitForm() {
       let node = document.createElement('tr');
+      let newButton = document.createElement('button');
+
+      node.id = tableId;
+      newButton.innerHTML = 'Deletar';
+      newButton.className = 'delete-button';
+      newButton.id = tableId;
+      newButton.addEventListener('click', deleteCar);
       infos.forEach((element, index) => {
         let newElement = document.createElement('td');
         let newElementImg = document.createElement('img');
@@ -70,14 +78,23 @@
           node.appendChild(newElement);
         }
       });
+      node.appendChild(newButton);
       table.appendChild(node);
-      handleClickButton();
+      tableId += 1;
+      clearValues();
     }
 
-    function handleClickButton() {
+    function clearValues() {
       infos.forEach((element) => {
         element.value = null;
       });
+    }
+
+    function deleteCar(event) {
+      let elementRemoved = document.querySelector(
+        `tr[id = "${event.target.id}"]`
+      );
+      table.removeChild(elementRemoved);
     }
   }
   app();
