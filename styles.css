@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Squada+One&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 32px;
+  background: rgb(0, 0, 53);
+  color: aliceblue;
+  font-family: 'Squada One', cursive;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: initial;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.phone {
+  color: rgb(250, 2, 64);
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+}
+
+form {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+
+label {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  color: rgb(0, 0, 53);
+}
+
+input {
+  margin: 4px 0 8px;
+  border-radius: 3px;
+  padding: 6px;
+  border: 1px solid rgb(179, 179, 179);
+}
+
+table {
+  margin-top: 24px;
+  max-width: 60%;
+  border: 1px solid rgb(179, 179, 179);
+  border-radius: 3px;
+}
+
+table,
+th,
+td {
+  font-family: 'Roboto', sans-serif;
+}
+
+th,
+tr,
+td {
+  text-align: center;
+  width: 240px;
+}
+
+img {
+  width: 200px;
+  border-radius: 6px;
+}
+
+button {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: rgb(0, 0, 53);
+  background: rgb(250, 2, 64);
+  padding: 8px 32px;
+  border: none;
+  border-radius: 3px;
+  margin-top: 12px;
+}
