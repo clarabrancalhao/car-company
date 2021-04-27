@@ -66,7 +66,7 @@ td {
 th,
 tr,
 td {
-  text-align: auto;
+  text-align: center;
   width: 240px;
   padding: auto;
 }
@@ -81,7 +81,7 @@ tr:hover {
 }
 
 img {
-  height: 150px;
+  width: 200px;
   border-radius: 6px;
 }
 
@@ -95,9 +95,5 @@ button {
   border: none;
   border-radius: 3px;
   margin-top: 12px;
-}
-
-.delete-button {
-  transform: translateY(-180%);
   cursor: pointer;
 }
